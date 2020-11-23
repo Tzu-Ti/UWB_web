@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>UWB Position</title>
+
+		<script type="text/javascript" src="{{ url_for('static', filename = 'draw_map.js') }}"></script>
+		<script src="{{ url_for('static', filename = 'jquery.js') }}" type="text/javascript"></script>
+		<script src="{{ url_for('static', filename = 'csmapi.js') }}" type="text/javascript"></script>
+		<script src="{{ url_for('static', filename = 'dan.js') }}" type="text/javascript"></script>
+		<script src="{{ url_for('static', filename = 'ida.js') }}" type="text/javascript"></script>
+		<script src="{{ url_for('static', filename = 'dai.js') }}" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+		{{ data }}
+		<canvas id="Map"></canvas>
+		<img id="baseStation" src="{{ url_for('static', filename = 'basestation.png') }}" style="display: none;"/>
+		<img id="car_red" src="{{ url_for('static', filename = 'car_red.png') }}" style="display: none;"/>
+	</body>
